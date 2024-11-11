@@ -11,7 +11,6 @@ export default function Search() {
   }
 
   function handleSubmit() {
-    event.preventDefault();
     let apiKey = "58a6775f97527351bf6c6966e209be39";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayWeather);
@@ -44,7 +43,7 @@ export default function Search() {
   if (result) {
     return (
       <div>
-        {form}
+        {form} 
         <ul>
           <li>Temperature:{weather.temperature}°C</li>
           <li>Description: {weather.description}</li>
